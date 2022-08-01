@@ -1,0 +1,32 @@
+﻿<Window x:Class="Kraftstoffrechner.add_new_element_win"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kraftstoffrechner"
+        mc:Ignorable="d"
+        Title="add_new_element_win" Height="375" Width="500" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" WindowState="Normal"
+        Background="{Binding OWBGC}">
+
+    <Window.DataContext>
+        <local:Vars/>
+    </Window.DataContext>
+    
+    <StackPanel>
+        <Label Content="Datum auswählen" Margin="10, 20, 10, 0" FontWeight="Bold" Foreground="{Binding FGC}"/>
+        <DatePicker x:Name="dp_1" HorizontalAlignment="Left" Margin="10, 0, 10, 0" Width="464"/>
+
+        <TextBlock Text="Bitte Tank Menge eingeben in Litern! Keine Buchstaben, Sonderzeichen und Punkte!" Margin="10, 10, 10, 0" FontWeight="Bold" TextWrapping="Wrap" Foreground="{Binding FGC}"/>
+        <TextBox x:Name="TB_input_tank_volume" MaxLength="7" Style="{StaticResource defaultTB}" Margin="10, 0, 10, 0"/>
+
+        <TextBlock Text="Bitte Preis der Tankfüllung eingeben in €! Keine Buchstaben, Sonderzeichen und Punkte!" Margin="10, 10, 10, 0"  FontWeight="Bold" TextWrapping="Wrap" Foreground="{Binding FGC}"/>
+        <TextBox x:Name="TB_input_tank_volume_price" MaxLength="6" Style="{StaticResource defaultTB}" Margin="10, 0, 10, 0"/>
+
+        <TextBlock Text="Kilometer angeben in km! Keine Buchstaben, Sonderzeichen und Punkte!"  Margin="10, 10, 10, 0" FontWeight="Bold" TextWrapping="Wrap" Foreground="{Binding FGC}"/>
+        <TextBox x:Name="TB_input_km" MaxLength="8" Style="{StaticResource defaultTB}" Margin="10, 0, 10, 0"/>
+
+        <Label Content="" x:Name="LBL_error" Margin="10, 5" Foreground="{Binding FGC}"/>
+
+        <Button x:Name="add_to_list_btn" Content="Neuen Eintrag hinzufügen" Click="add_to_list_btn_Click" Style="{StaticResource defaultButton}" Margin="10, 5, 10, 0" Height="22"/>
+    </StackPanel>
+</Window>

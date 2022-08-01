@@ -1,0 +1,80 @@
+﻿<Window x:Class="Kraftstoffrechner.applydelete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kraftstoffrechner"
+        mc:Ignorable="d" Height="150" Width="275" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen" Title="Löschen"
+        Background="{Binding OWBGC}">
+
+    <Window.DataContext>
+        <local:Vars/>
+    </Window.DataContext>
+
+    <StackPanel>
+        <TextBlock Text="Wollen Sie wirklich ALLE Daten löschen?" FontSize="11" Margin="20, 20, 0, 0" FontWeight="Bold" TextDecorations="{x:Null}" Foreground="{Binding FGC}"/>
+
+        <Grid Margin="20, 40, 20, 0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="apply" Content="löschen" Click="apply_Click" Margin="10, 0" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="bdr_btn_cc" CornerRadius="5" BorderBrush="#FF0078D4" BorderThickness="1" Background="#FFFAFAFA">
+                            <TextBlock Text="Löschen" TextAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard x:Name="bsb_2_b">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.1" Storyboard.TargetName="bdr_btn_cc" Storyboard.TargetProperty="Background.Color" To="LightGray"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard x:Name="bsb_2_e">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.1" Storyboard.TargetName="bdr_btn_cc" Storyboard.TargetProperty="Background.Color" To="#FFFAFAFA"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                    <Condition Property="IsPressed" Value="False"/>
+                                </MultiTrigger.Conditions>
+                                <MultiTrigger.EnterActions>
+                                    <BeginStoryboard x:Name="bsb_1_b">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.15" Storyboard.TargetName="bdr_btn_cc" Storyboard.TargetProperty="Background.Color" To="Red"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </MultiTrigger.EnterActions>
+                                <MultiTrigger.ExitActions>
+                                    <BeginStoryboard x:Name="bsb_1_e">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.15" Storyboard.TargetName="bdr_btn_cc" Storyboard.TargetProperty="Background.Color"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </MultiTrigger.ExitActions>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="bdr_btn_cc" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            
+            <Button x:Name="cancel" Content="Abbrechen" Click="cancel_Click" Margin="10, 0" Grid.Column="0" Style="{StaticResource defaultButton}"/>
+
+        </Grid>
+        
+    </StackPanel>
+</Window>
