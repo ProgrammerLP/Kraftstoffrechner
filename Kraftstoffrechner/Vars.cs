@@ -11,7 +11,7 @@ namespace Kraftstoffrechner
     {
 
         //general
-        public static string version = "1.1.4.0";
+        public static string version = "1.1.4.1";
         public static bool darkmode;
 
         public static Brush FGC { get; set; }

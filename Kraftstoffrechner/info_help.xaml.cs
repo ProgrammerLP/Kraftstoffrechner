@@ -23,8 +23,8 @@ namespace Kraftstoffrechner
     {
         SystemInfo sysinfo = new SystemInfo();
 
-        public string about = "PLP-Fuelinfo ist eine offizielle, lizensierte, modern gestalltete und leicht zu benutztende Anwendung von ProgrammerLP, damit Sie ihre Kraftstoff Ausgaben im Blick behalten und verwalten können.\nMehr Informationen finden Sie auf der Website.";
-        public string lizenz = "Dieses Produkt wurde von ProgrammerLP zur Verfügen gestellt \nNutzung nur für private Zwecke, kein Verleih oder weiterverkauf oder ähnliches! \nSiehe Lizenz Informationen. \n© - 2022 by ProgrammerLP, All rights reserved";
+        public string about = "PLP-Fuelinfo ist eine offizielle, open-source, modern gestalltete und leicht zu benutztende Anwendung von ProgrammerLP, damit Sie ihre Kraftstoff Ausgaben im Blick behalten und verwalten können.\nMehr Informationen finden Sie auf der Website.";
+        public string lizenz = "Dieses Produkt ist eine LTS App! Mehr Informationen finden Sie auf der Website. \n© - 2022 by ProgrammerLP, All rights reserved";
 
         public info_help()
         {
@@ -42,7 +42,7 @@ namespace Kraftstoffrechner
 
         private void H_Ud_BTN_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://programmerlp-net.vercel.app/licens_privacy_info.html");
+            Process.Start("https://programmerlp-net.vercel.app/LTS-Apps-changes.html");
         }
 
         private void H_DS_BTN_Click(object sender, RoutedEventArgs e)

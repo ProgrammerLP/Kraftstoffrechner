@@ -90,7 +90,7 @@
             <TextBlock HorizontalAlignment="Center" Foreground="{Binding FGC}" Text="Hilfe aus dem Web: " x:Name="LBL_Links" FontWeight="Bold" FontSize="16" Margin="0, 10, 0, 0" TextDecorations="Underline" TextAlignment="Left"/>
             <Button Style="{StaticResource LinkButton}" x:Name="H_LI_BTN" Content="> Changelog" Click="H_LI_BTN_Click" IsEnabled="True" Width="250" Margin="0, 10, 10, 0" HorizontalAlignment="Center" Foreground="{Binding FGC}" Height="25" FontSize="16" HorizontalContentAlignment="Left"/>
             <Button Style="{StaticResource LinkButton}" x:Name="H_DS_BTN" Content="> Webseite" Click="H_DS_BTN_Click" IsEnabled="True" Width="250" Margin="0, 10, 10, 0" HorizontalAlignment="Center" Foreground="{Binding FGC}" Height="25" FontSize="16" HorizontalContentAlignment="Left"/>
-            <Button Style="{StaticResource LinkButton}" x:Name="H_Ud_BTN" Content="> Lizenz und Datenschutz" Click="H_Ud_BTN_Click" IsEnabled="True" Width="250" Margin="0, 10, 10, 0" HorizontalAlignment="Center" Foreground="{Binding FGC}" Height="25" FontSize="16" HorizontalContentAlignment="Left"/>
+            <Button Style="{StaticResource LinkButton}" x:Name="H_Ud_BTN" Content="> Infos zu LTS " Click="H_Ud_BTN_Click" IsEnabled="True" Width="250" Margin="0, 10, 10, 0" HorizontalAlignment="Center" Foreground="{Binding FGC}" Height="25" FontSize="16" HorizontalContentAlignment="Left"/>
             <Button Style="{StaticResource LinkButton}" x:Name="H_HO_RM_BTN" Content="> Hilfe &amp; Feedback" Click="H_HO_RM_BTN_Click" Width="250" Margin="0, 10, 10, 0" HorizontalAlignment="Center" Foreground="{Binding FGC}" Height="25" FontSize="16" HorizontalContentAlignment="Left"/>
         </StackPanel>
 
